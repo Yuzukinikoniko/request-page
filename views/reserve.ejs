@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset= "UTF-8">
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/stylesheets/reset.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/stylesheets/style.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <span class="cercle1"></span>
+    <span class="cercle2"></span>
+    <span class="cercle3"></span>
+    <span class="cercle4"></span>
+    <header>
+      <div class="header-inner">
+        <h1>
+          <a href="">〇〇大学弓道部<br />質問ページ</a>
+        </h1>
+        <div class="nav">
+          <div class="li"><a href="/add">質問する</a></div>
+          <div class="li"><a href="/noanswer">体験入部の予約をする</a></div>
+          <div class="li"><a href="/noanswer">未回答の質問を見る</a></div>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div class="main-inner">
+        <div class="main-top">
+          <div class="main-top-inner">
+            <h2>体験入部予約一覧</h2>
+            <p>
+              ※基本的に水曜日は男女一緒、土曜日は男女別で練習をしています。詳細は予約の場所でご覧ください。<br />
+              何度でも予約は出ます。当日は、5分前程度にお集まりください。キャンセルをする場合は電話(000-0000-0000)でこちらにお伝えください。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="reserve-main">
+        <div class="reserve-main-inner">
+          <div class="reserve">  
+            <div class="reserve-inner-top">
+                <div class="">日時</div>
+                <div class="">定員</div>
+                <div class="">予約状況</div>
+                <div class="">練習形式</div>     
+            </div>
+                <% for(var i in reserve) {%> 
+                    <% var obj = reserve[i]; %>
+                    <div class="reserve-inner-row">
+                    <p><%= obj.time %></p>
+                    <p><%= obj.capacity %></p>
+                    <p><%= obj.count %></p>
+                    <p><%= obj.gender %></p>
+                    <input name="time" type="hidden" value="<%= obj.time%>" id="time">
+                    <input name="count" type="hidden" value="<%= obj.count%>" id="count">
+                    <form method="post" action="/reserve">
+                        <input
+                        type="submit"
+                        value="予約する"
+                        id="reserve"
+                        name="reserve"
+                        />
+                    </form>
+                    </div>
+                    <% } %>
+                </div>    
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+    <script src="/javascripts/javascript.js"></script>
+  </body>
+</html>

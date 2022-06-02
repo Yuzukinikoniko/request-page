@@ -1,0 +1,492 @@
+body {
+  color: #484545;
+  font: 14px "Hiragino Kaku Gothic ProN", "Lucida Grande", Helvetica, Arial,
+    sans-serif;
+  position: relative;
+}
+.cercle1 {
+  position: absolute;
+  position: fixed;
+  z-index: -5;
+  top: -30vh;
+  left: -10vw;
+  background-color: #ffebe7;
+  padding: 0;
+  margin: 0;
+  width: 700px;
+  height: 700px;
+  display: inline-block;
+  border-radius: 50%;
+  animation: cercleanimation1 60s infinite linear alternate;
+}
+.cercle2 {
+  position: absolute;
+  position: fixed;
+  z-index: -6;
+  top: 60vh;
+  left: 20vw;
+  background-color: #c9a8dd;
+  padding: 0;
+  margin: 0;
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+  border-radius: 50%;
+  animation: cercleanimation2 50s infinite linear alternate;
+}
+.cercle3 {
+  position: absolute;
+  position: fixed;
+  z-index: -4;
+  top: 40vh;
+  left: 50vw;
+  background-color: #ffc0be;
+  padding: 0;
+  margin: 0;
+  width: 450px;
+  height: 450px;
+  display: inline-block;
+  border-radius: 50%;
+  animation: cercleanimation3 60s infinite linear alternate;
+}
+.cercle4 {
+  position: absolute;
+  position: fixed;
+  z-index: -3;
+  top: 20vh;
+  left: 70vw;
+  background-color: #ff82a9;
+  padding: 0;
+  margin: 0;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  border-radius: 50%;
+  animation: cercleanimation4 50s infinite linear alternate;
+}
+@keyframes cercleanimation1 {
+  0% {
+    top: -30vh;
+    left: -10vw;
+  }
+  100% {
+    left: 100%;
+    top: 100%;
+  }
+}
+@keyframes cercleanimation2 {
+  0% {
+    top: 60vh;
+    left: 20vw;
+  }
+  100% {
+    left: 0%;
+    top: 90%;
+  }
+}
+@keyframes cercleanimation3 {
+  0% {
+    top: 40vh;
+    left: 50vw;
+  }
+  100% {
+    left: 90%;
+    top: 10%;
+  }
+}
+@keyframes cercleanimation4 {
+  0% {
+    top: 20vh;
+    left: 70vw;
+  }
+  100% {
+    left: 20%;
+    top: 100%;
+  }
+}
+header {
+  margin-top: 20px;
+  height: 120px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-inner {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
+}
+.header-inner　h1 {
+  display: block;
+  margin-right: auto;
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.nav {
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.li {
+  display: flex;
+  padding-left: 30px;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+.li a {
+  align-items: center;
+}
+.li:first-child {
+  padding-left: 0;
+}
+.btn {
+  display: inline-block;
+  width: 300px;
+  max-width: 100%;
+  padding: 20px 10px;
+  background-color: white;
+  border: 1px solid #707070;
+  font-size: 32px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.25s;
+}
+a {
+  text-decoration: none;
+  color: #484545;
+}
+.cards {
+  display: grid;
+  width: 88vw;
+  margin: 0 auto 6vw;
+  gap: 2vw;
+  grid-template-columns: 28vw 28vw 28vw;
+}
+.card {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  border: 1px solid #707070;
+  height: 40vh;
+  position: relative;
+  background: white;
+}
+.card-top {
+  padding: 10px 20px;
+}
+.card-under {
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #707070;
+  width: 100%;
+  text-align: center;
+}
+header h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+header li {
+  font-size: 23px;
+  font-weight: bold;
+}
+form {
+  display: inline-flex;
+}
+input {
+  border: 0;
+  padding: 10px;
+  font-size: 1.3em;
+  font-family: Arial, sans-serif;
+  border: solid 1px #707070;
+  margin: 0 0 20px;
+  width: 60vw;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: white;
+}
+.add-question {
+  height: 200px;
+}
+.form-group {
+  margin-right: 20px;
+}
+.search {
+  background-color: #7da8e3;
+  border: 1px solid #7da8e3;
+  font-size: 14px;
+  padding: 10px 5px;
+  width: 75px;
+}
+.question {
+  max-width: 100%;
+  padding: 15px 40px;
+  background-color: white;
+  border: 1px solid #707070;
+  font-size: 28px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 44px;
+  margin-bottom: 100px;
+}
+.question-div {
+  width: 300px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-top h2 {
+  font-size: 33px;
+  font-weight: bold;
+}
+.main-top p {
+  font-size: 18px;
+}
+.main {
+  width: 100%;
+  padding-top: 140px;
+}
+.main-inner {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-top {
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+.main-top-inner {
+  display: inline-flex;
+}
+.main-top-inner h2 {
+  padding-right: 40px;
+}
+.main-cards-inner h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+.content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.content-inner {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-noanswer {
+  padding-top: 140px;
+}
+.detail {
+  background-color: white;
+}
+.detail_inner {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding-top: 96px;
+  padding-bottom: 63px;
+}
+iframe {
+  width: 608px;
+  height: 440px;
+}
+.schedule {
+  margin-left: 20px;
+  font-size: 14px;
+  width: 533px;
+  line-height: 38px;
+}
+.schedule_inner {
+  margin-top: 19px;
+}
+.border {
+  background: linear-gradient(transparent 73.6%, #d4edf4 73.6%);
+}
+.schedule_under {
+  border-bottom: solid 2px #e7e7e7;
+  font-size: 14px;
+  padding-bottom: 19px;
+  margin-top: 20px;
+}
+.res {
+  display: flex;
+}
+dl {
+  display: flex;
+}
+dt {
+  border-right: solid 2px #e7e7e7;
+  width: 84px;
+  margin-right: 28.5px;
+}
+.first_dd {
+  padding-left: 23px;
+  padding-right: 16px;
+}
+.inner_p {
+  padding-bottom: 33.2px;
+  padding-top: 30px;
+}
+.inner_p p:last-child {
+  padding-left: 16px;
+  display: inline-block;
+}
+.reserve {
+}
+.reserve-main {
+  width: 100%;
+}
+.reserve-main-inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+}
+.reserve-inner-top {
+  display: flex;
+}
+.reserve-inner-row {
+  display: flex;
+}
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #ffebe7;
+  text-align: center;
+  color: #fff;
+}
+.flower1 {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  width: 500px;
+  height: 500px;
+  display: inline-block;
+  border-radius: 50%;
+  animation: slide1 10s infinite linear;
+}
+.flower2 {
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  background-color: #fffdc0;
+  padding: 0;
+  margin: 0;
+  width: 600px;
+  height: 600px;
+  display: inline-block;
+  border-radius: 50%;
+  animation: slide2 10s infinite linear;
+}
+.flower3 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background-color: #eeeeee;
+  padding: 0;
+  margin: 0;
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+  border-radius: 50%;
+  animation: slide3 10s infinite linear;
+}
+.flower4 {
+  position: absolute;
+  background-color: #d4edf4;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  border-radius: 50%;
+  animation: slide4 8s infinite linear;
+}
+@keyframes slide1 {
+  0% {
+    left: 30%;
+    top: 20%;
+  }
+  100% {
+    left: 110%;
+    top: 0%;
+  }
+}
+@keyframes slide2 {
+  0% {
+    left: 80%;
+    top: 60%;
+  }
+  100% {
+    left: -30%;
+    top: -50%;
+  }
+}
+@keyframes slide3 {
+  0% {
+    top: 60%;
+    left: 50%;
+  }
+  100% {
+    left: 10%;
+    top: 120%;
+  }
+}
+@keyframes slide4 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 120%;
+    top: 120%;
+  }
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg {
+  width: 300px;
+}
+
+/*=============== SVGアニメーション内の指定 =================*/
+
+/*アニメーション前の指定*/
+#mask path {
+  fill-opacity: 0; /*最初は透過0で見えない状態*/
+  transition: fill-opacity 1s; /*カラーがつく際のアニメーション0.5秒で変化*/
+  fill: none; /*塗りがない状態*/
+  stroke: #333; /*線の色*/
+}
+
+/*アニメーション後に.doneというクラス名がで付与された時の指定*/
+#mask.done path {
+  fill: #333; /*塗りの色*/
+  fill-opacity: 1; /*透過1で見える状態*/
+  stroke: none; /*線の色なし*/
+}

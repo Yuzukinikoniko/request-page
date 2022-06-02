@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset="UTF-8">
+    <title>〇〇大学お問い合わせサイト</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+  </head>
+  <body class="container">
+    <header>
+      <h1 class="display-4"><%= title %></h1>
+    </header>
+    <div role="main"></div>
+    <% for(var i in content) {%>
+    <div class="card">
+      <div class="card-top">
+        <% var obj = content[i]; %>
+        <p><%= obj.question %></p>
+        <p><%= obj.answer %></p>
+      </div>
+      <div class="card-under">
+        <p><%= obj.createdAt %></p>
+      </div>
+    </div>
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset="UTF-8">
+    <title>〇〇大学お問い合わせサイト</title>
+    <link
+      rel="stylesheet"
+      href="/stylesheets/reset.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+  </head>
+  <body>
+    <span class="cercle1"></span>
+    <span class="cercle2"></span>
+    <span class="cercle3"></span>
+    <span class="cercle4"></span>
+    <header>
+      <div class="header-inner">
+        <h1><a href="/">〇〇大学弓道部<br>質問ページ</a></h1>
+        <div class="nav">
+          <div class="li"><a href="/add">質問する</a></div>
+          <div class="li"><a href="/noanswer">体験入部の予約をする</a></div>
+          <div class="li"><a href="/noanswer">未回答の質問を見る</a></div>
+        </div>
+      </div>
+    </header>
+    <div role="main"></div>
+    <div class="main">
+      <div class="main-inner">
+        <h2>質問内容を入力してください。</h2>
+    <form method="post" action="/add">
+      <div class="form-group">
+        <textarea type="text" name="question" id="question" class="form-control add-question" ></textarea>
+      </div>
+      <input type="submit" value="作成" class="btn search " />
+    </form>
+  </body>
+</html>

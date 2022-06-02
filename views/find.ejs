@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset= "UTF-8">
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="/stylesheets/reset.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/stylesheets/style.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <span class="cercle1"></span>
+    <span class="cercle2"></span>
+    <span class="cercle3"></span>
+    <span class="cercle4"></span>
+    <header>
+        <div class="header-inner">
+          <h1><a href="">〇〇大学弓道部<br>質問ページ</a></h1>
+          <div class="nav">
+            <div class="li"><a href="/add">質問する</a></div>
+            <div class="li"><a href="/noanswer">体験入部の予約をする</a></div>
+            <div class="li"><a href="/noanswer">未回答の質問を見る</a></div>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <div class="main-inner">
+          <div class="main-top">
+            <div class="main-top-inner">
+            <h2>よくある質問</h2>
+            <p>このサイトは新入生からの質問を現弓道部部員が回答するサイトです。<br>
+              弓道に興味がある人や弓道部の入部を考えている人は気軽に質問してください。
+            </p>
+          </div>    
+          </div>
+          
+    <form method="post" action="/find">
+        <div class="form-group">
+          <input
+          type="text"
+          name="find"
+          id="find"
+          class="form-control"
+          value="<%=find %>"
+          />
+        </div>
+        <input type="submit" value="検索" class="btn search" />
+      </form>
+    </div>
+  </div> 
+  <div class="content"><div class="content-inner"><p><%= content %></p></div></div>
+  <div class="main-cards">
+    <div class="main-cards-inner">
+      
+      <div class="cards">
+        <% for(var i in qanda) {%>
+          <div class="card">
+            <div class="card-top">
+              <% var obj = qanda[i]; %>
+              <p>Q: <%= obj.question %></p>
+              <p>A: <%= obj.answer %></p>
+            </div>
+            <div class="card-under">
+              <p><%= obj.createdAt %></p>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
